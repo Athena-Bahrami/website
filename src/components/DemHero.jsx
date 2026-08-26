@@ -197,6 +197,7 @@ export default function DemHero() {
     const fragmentMeshes = fragmentMaterials.map((mat) => {
       const m = new THREE.InstancedMesh(geometry, mat, PARTICLE_COUNT);
       m.count = 0;
+      m.frustumCulled = false;
       rockGroup.add(m);
       return m;
     });
@@ -204,6 +205,8 @@ export default function DemHero() {
     const crackMeshB = new THREE.InstancedMesh(geometry, crackMaterialB, PARTICLE_COUNT);
     crackMeshA.count = 0;
     crackMeshB.count = 0;
+    crackMeshA.frustumCulled = false;
+    crackMeshB.frustumCulled = false;
     rockGroup.add(crackMeshA, crackMeshB);
 
     const dummy = new THREE.Object3D();
