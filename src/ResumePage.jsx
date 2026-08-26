@@ -5,7 +5,7 @@ const FRAGMENTS = [
   {
     id: "summary",
     title: "Summary",
-    accent: "var(--c-summary)",
+    accent: "#EE6F11",
     defaultOpen: true,
     body: (
       <>
@@ -34,7 +34,7 @@ const FRAGMENTS = [
   {
     id: "experience",
     title: "Professional Experience",
-    accent: "var(--c-experience)",
+    accent: "#EE6F11",
     body: (
       <>
         <div className="entry">
@@ -148,7 +148,7 @@ const FRAGMENTS = [
   {
     id: "skills",
     title: "Skills",
-    accent: "var(--c-skills)",
+    accent: "#EE6F11",
     body: (
       <div className="skills-grid">
         <div className="skill-cat">
@@ -189,7 +189,7 @@ const FRAGMENTS = [
   {
     id: "education",
     title: "Education",
-    accent: "var(--c-education)",
+    accent: "#EE6F11",
     body: (
       <>
         <div className="entry">
@@ -223,7 +223,7 @@ const FRAGMENTS = [
   {
     id: "leadership",
     title: "Leadership & Service",
-    accent: "var(--c-leadership)",
+    accent: "#EE6F11",
     body: (
       <>
         <div className="entry">
@@ -258,7 +258,7 @@ const FRAGMENTS = [
   {
     id: "affiliations",
     title: "Professional Affiliations",
-    accent: "var(--c-affiliations)",
+    accent: "#EE6F11",
     body: (
       <ul className="bullets">
         <li>
@@ -273,7 +273,7 @@ const FRAGMENTS = [
   {
     id: "awards",
     title: "Certificates & Awards",
-    accent: "var(--c-awards)",
+    accent: "#EE6F11",
     body: (
       <ul className="bullets">
         <li>
@@ -319,7 +319,7 @@ export default function ResumePage() {
 
   return (
     <div className="resume-page">
-      <div className="page">
+      <div className="resume-container">
         <div className="chrome">
           <a className="back" href="/">
             ← BACK
@@ -334,7 +334,7 @@ export default function ResumePage() {
         </div>
 
         <div className="fragments">
-          {FRAGMENTS.map((fragment, i) => {
+          {FRAGMENTS.map((fragment) => {
             const isOpen = openIds.has(fragment.id);
             return (
               <div
@@ -349,10 +349,6 @@ export default function ResumePage() {
                   aria-expanded={isOpen}
                   onClick={() => toggle(fragment.id)}
                 >
-                  <span className="fragment-index">
-                    {String(i + 1).padStart(2, "0")}&nbsp;/&nbsp;
-                    {String(FRAGMENTS.length).padStart(2, "0")}
-                  </span>
                   <span className="fragment-title">{fragment.title}</span>
                   <span className="fragment-toggle">+</span>
                 </button>
