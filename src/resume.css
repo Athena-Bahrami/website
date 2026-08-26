@@ -21,12 +21,11 @@
   color: #e8e6e1;
   font-family: var(--body-font);
   -webkit-font-smoothing: antialiased;
-  padding: 56px 24px 120px;
+  padding: 56px 5vw 120px;
 }
 
 .resume-page .page {
-  max-width: 1040px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .resume-page .chrome {
@@ -78,32 +77,6 @@
   text-wrap: balance;
 }
 
-.resume-page .role-line {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: #8a8f94;
-  letter-spacing: 0.02em;
-}
-
-.resume-page .contact-line {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: #8a8f94;
-  margin-top: 10px;
-}
-.resume-page .contact-line a {
-  color: #8a8f94;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.resume-page .contact-line a:hover {
-  color: #e8e6e1;
-  border-bottom-color: #e8e6e1;
-}
-.resume-page .dot-sep {
-  margin: 0 10px;
-  color: var(--rule);
-}
 
 .resume-page .fragments {
   display: flex;

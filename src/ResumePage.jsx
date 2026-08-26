@@ -325,28 +325,12 @@ export default function ResumePage() {
             ← BACK
           </a>
           <a className="download" href="/resume.pdf" download>
-            Download PDF
+            Download Professional PDF
           </a>
         </div>
 
         <div className="identity">
           <h1>Atena Bahrami</h1>
-          <div className="role-line">
-            PhD Candidate, Geotechnical Engineering — University of Alberta
-          </div>
-          <div className="contact-line">
-            <a href="mailto:bahrami.atena@gmail.com">
-              bahrami.atena@gmail.com
-            </a>
-            <span className="dot-sep">·</span>
-            <a
-              href="https://www.linkedin.com/in/bahrami-athena"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn ↗
-            </a>
-          </div>
         </div>
 
         <div className="fragments">
