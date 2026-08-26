@@ -326,8 +326,8 @@ export default function ResumePage() {
           </a>
           <a
             className="download"
-            href="/resume.pdf"
-            download="athena_bahrami_cv.pdf"
+            href="/athena_bahrami_cv.pdf"
+            download
           >
             Download Professional PDF
           </a>
