@@ -4,7 +4,7 @@ import DemHero from "./components/DemHero";
 const NAME = "Athena Bahrami";
 const PRONOUNS = "she/her";
 const LINKS = [
-  { label: "Resume", href: "/resume.pdf" },
+  { label: "Resume", href: "/resume.html" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/bahrami-athena" },
   { label: "Github", href: "https://github.com/your-username" },
   { label: "Email", href: "mailto:bahrami.atena@gmail.com" },
