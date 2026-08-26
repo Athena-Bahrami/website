@@ -12,21 +12,17 @@ const LINKS = [
 
 export default function App() {
   return (
-    <div>
-      <DemHero />
+    <div className="page">
+      <div className="page-visual">
+        <DemHero />
+      </div>
 
-      <section
-        style={{
-          background: "#0a0c0e",
-          padding: "80px 24px 96px",
-          textAlign: "center",
-        }}
-      >
+      <div className="page-info">
         <h1
           style={{
             fontSize: 40,
             fontWeight: 500,
-            margin: "0 0 12px",
+            margin: 0,
             color: "#e8e6e1",
           }}
         >
@@ -36,20 +32,13 @@ export default function App() {
           style={{
             fontSize: 18,
             color: "#8a8f94",
-            margin: "0 0 32px",
+            margin: 0,
           }}
         >
           {TAGLINE}
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
+        <div className="page-links">
           {LINKS.map((link) => (
             <a
               key={link.label}
@@ -59,7 +48,7 @@ export default function App() {
               style={{
                 border: "1px solid #2a2d31",
                 borderRadius: 4,
-                padding: "10px 20px",
+                padding: "12px 20px",
                 fontSize: 15,
                 color: "#e8e6e1",
                 textDecoration: "none",
@@ -69,7 +58,7 @@ export default function App() {
             </a>
           ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

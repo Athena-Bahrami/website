@@ -21,3 +21,50 @@ body {
 a {
   color: inherit;
 }
+
+.page {
+  display: flex;
+  height: 100svh;
+  background: #0a0c0e;
+}
+
+.page-visual {
+  flex: 1 1 60%;
+  min-width: 0;
+  height: 100%;
+}
+
+.page-info {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 64px 56px;
+}
+
+.page-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+  .page-visual {
+    flex: none;
+    width: 100%;
+    height: 60svh;
+  }
+  .page-info {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px 56px;
+  }
+}

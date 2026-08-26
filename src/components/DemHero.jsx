@@ -651,7 +651,7 @@ export default function DemHero() {
       style={{
         position: "relative",
         width: "100%",
-        height: "100svh",
+        height: "100%",
         background: "radial-gradient(ellipse at 50% 40%, #14171B 0%, #0A0C0E 70%)",
         overflow: "hidden",
       }}
