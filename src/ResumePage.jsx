@@ -324,13 +324,13 @@ export default function ResumePage() {
           <a className="back" href="/">
             ← BACK
           </a>
-          <a className="download" href="/resume.pdf" download>
+          <a
+            className="download"
+            href="/resume.pdf"
+            download="athena_bahrami_cv.pdf"
+          >
             Download Professional PDF
           </a>
-        </div>
-
-        <div className="identity">
-          <h1>Atena Bahrami</h1>
         </div>
 
         <div className="fragments">
