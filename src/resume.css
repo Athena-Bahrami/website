@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+.resume-page {
+  --rule: #232326;
+  --surface-hover: #0c0c0d;
+
+  --c-summary: #38bac7;
+  --c-experience: #e5e619;
+  --c-skills: #15ea24;
+  --c-education: #db24c5;
+  --c-leadership: #ee6f11;
+  --c-affiliations: #8b5cf6;
+  --c-awards: #e11e38;
+
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body-font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  min-height: 100svh;
+  background: #000;
+  color: #e8e6e1;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  padding: 56px 24px 120px;
+}
+
+.resume-page .page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.resume-page .chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.resume-page .back {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #8a8f94;
+  text-decoration: none;
+}
+.resume-page .back:hover {
+  color: #e8e6e1;
+}
+
+.resume-page .download {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8e6e1;
+  text-decoration: none;
+  border: 1.5px solid #e8e6e1;
+  padding: 10px 20px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.resume-page .download:hover {
+  background: #e8e6e1;
+  color: #000;
+}
+
+.resume-page .identity {
+  margin-bottom: 64px;
+}
+
+.resume-page h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: clamp(40px, 7vw, 60px);
+  line-height: 1;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+.resume-page .role-line {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: #8a8f94;
+  letter-spacing: 0.02em;
+}
+
+.resume-page .contact-line {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: #8a8f94;
+  margin-top: 10px;
+}
+.resume-page .contact-line a {
+  color: #8a8f94;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.resume-page .contact-line a:hover {
+  color: #e8e6e1;
+  border-bottom-color: #e8e6e1;
+}
+.resume-page .dot-sep {
+  margin: 0 10px;
+  color: var(--rule);
+}
+
+.resume-page .fragments {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-page .fragment {
+  border-bottom: 1px solid var(--rule);
+}
+.resume-page .fragment:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.resume-page .fragment-top {
+  height: 2px;
+  background: var(--rule);
+  transition: height 0.25s ease, background 0.25s ease;
+}
+.resume-page .fragment[data-open="true"] .fragment-top {
+  height: 4px;
+  background: var(--accent);
+}
+
+.resume-page .fragment-header {
+  all: unset;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  width: 100%;
+  cursor: pointer;
+  padding: 22px 4px;
+  transition: background 0.15s ease;
+}
+.resume-page .fragment-header:hover {
+  background: var(--surface-hover);
+}
+.resume-page .fragment-header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.resume-page .fragment-index {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #8a8f94;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+}
+
+.resume-page .fragment-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--accent);
+  flex: 1;
+}
+
+.resume-page .fragment-toggle {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: #8a8f94;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.15s ease;
+  padding-top: 2px;
+}
+.resume-page .fragment[data-open="true"] .fragment-toggle {
+  color: var(--accent);
+  transform: rotate(45deg);
+}
+
+.resume-page .fragment-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.resume-page .fragment[data-open="true"] .fragment-body-wrap {
+  grid-template-rows: 1fr;
+}
+.resume-page .fragment-body-inner {
+  overflow: hidden;
+}
+.resume-page .fragment-body {
+  padding: 0 4px 32px 42px;
+  max-width: 62ch;
+}
+
+.resume-page .fragment-body p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+  font-size: 15.5px;
+  color: #e8e6e1;
+}
+.resume-page .fragment-body p:last-child {
+  margin-bottom: 0;
+}
+
+.resume-page .entry {
+  margin-bottom: 22px;
+}
+.resume-page .entry:last-child {
+  margin-bottom: 0;
+}
+
+.resume-page .entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.resume-page .entry-title {
+  font-weight: 600;
+  font-size: 15.5px;
+}
+.resume-page .entry-org {
+  font-size: 14px;
+  color: #8a8f94;
+  font-style: italic;
+}
+.resume-page .entry-date {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #8a8f94;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.resume-page .entry-head--stack .entry-title {
+  order: 1;
+}
+.resume-page .entry-head--stack .entry-date {
+  order: 2;
+}
+.resume-page .entry-head--stack .entry-org {
+  order: 3;
+  flex-basis: 100%;
+  margin-top: 2px;
+}
+
+.resume-page ul.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.resume-page ul.bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 9px;
+  line-height: 1.55;
+  font-size: 14.5px;
+  color: #e8e6e1;
+}
+.resume-page ul.bullets li:last-child {
+  margin-bottom: 0;
+}
+.resume-page ul.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.resume-page ul.bullets li b {
+  font-weight: 600;
+}
+
+.resume-page .skills-grid {
+  display: grid;
+  gap: 16px;
+}
+.resume-page .skill-cat {
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.resume-page .skill-cat b {
+  display: block;
+  font-weight: 600;
+  color: #e8e6e1;
+  margin-bottom: 2px;
+}
+.resume-page .skill-cat span {
+  color: #8a8f94;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-page .fragment-top,
+  .resume-page .fragment-toggle,
+  .resume-page .fragment-body-wrap,
+  .resume-page .download {
+    transition: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .resume-page {
+    padding: 40px 18px 100px;
+  }
+  .resume-page .fragment-title {
+    font-size: 20px;
+  }
+  .resume-page .fragment-body {
+    padding-left: 28px;
+  }
+  .resume-page .entry-date {
+    margin-left: 0;
+  }
+}
