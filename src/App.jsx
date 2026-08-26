@@ -5,9 +5,10 @@ const NAME = "Athena Bahrami";
 const PRONOUNS = "she/her";
 const LINKS = [
   { label: "Resume", href: "/resume.pdf" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/your-profile" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/bahrami-athena" },
   { label: "Github", href: "https://github.com/your-username" },
-  { label: "Email", href: "mailto:bahramiy@ualberta.ca" },
+  { label: "Email", href: "mailto:bahrami.atena@gmail.com" },
+  { label: "Sundry", href: "#" }, // TODO: point this at whatever "Sundry" should link to
 ];
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
     <div className="page">
       <div className="page-info">
         <div className="name-row">
-          <div className="name-box">{NAME}</div>
+          <h1 className="name-box">{NAME}</h1>
           <span className="pronouns">{PRONOUNS}</span>
         </div>
 

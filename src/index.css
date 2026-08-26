@@ -54,8 +54,7 @@ a {
 }
 
 .name-box {
-  border: 2px solid #8b5cf6;
-  padding: 10px 20px;
+  margin: 0;
   font-size: 32px;
   font-weight: 700;
   color: #e8e6e1;
