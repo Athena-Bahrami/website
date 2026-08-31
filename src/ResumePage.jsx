@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GeoscienceWorkstation from "./components/GeoscienceWorkstation";
 import "./resume.css";
 
 const FRAGMENTS = [
@@ -354,7 +355,20 @@ export default function ResumePage() {
                 </button>
                 <div className="fragment-body-wrap">
                   <div className="fragment-body-inner">
-                    <div className="fragment-body">{fragment.body}</div>
+                    {fragment.id === "experience" ? (
+                      <div className="fragment-body fragment-body--wide">
+                        <div className="experience-layout">
+                          <div className="experience-text">
+                            {fragment.body}
+                          </div>
+                          <div className="experience-visual">
+                            {isOpen && <GeoscienceWorkstation />}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="fragment-body">{fragment.body}</div>
+                    )}
                   </div>
                 </div>
               </div>
