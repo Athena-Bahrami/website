@@ -147,19 +147,19 @@
   min-width: 0;
 }
 .resume-page .experience-visual {
-  flex: 1 1 480px;
-  min-width: 380px;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
 .resume-page .experience-visual-slot {
   border: 1px dashed var(--rule);
   border-radius: 6px;
-}
-.resume-page .experience-visual-slot--empty {
   height: 300px;
+  aspect-ratio: 1.82;
+  max-width: 100%;
 }
 .resume-page .experience-visual-slot--filled {
   height: 540px;
@@ -171,11 +171,9 @@
   .resume-page .experience-layout {
     flex-direction: column;
   }
-  .resume-page .experience-visual-slot--empty {
-    height: 220px;
-  }
-  .resume-page .experience-visual-slot--filled {
-    height: 420px;
+  .resume-page .experience-visual-slot {
+    height: auto;
+    width: 100%;
   }
 }
 
