@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DemHero from "./components/DemHero";
 import GeoscienceWorkstation from "./components/GeoscienceWorkstation";
 import "./resume.css";
 
@@ -362,8 +363,10 @@ export default function ResumePage() {
                             {fragment.body}
                           </div>
                           <div className="experience-visual">
-                            <div className="experience-visual-slot experience-visual-slot--empty" />
-                            <div className="experience-visual-slot experience-visual-slot--filled">
+                            <div className="experience-visual-slot experience-visual-slot--top">
+                              {isOpen && <DemHero />}
+                            </div>
+                            <div className="experience-visual-slot experience-visual-slot--bottom">
                               {isOpen && <GeoscienceWorkstation />}
                             </div>
                           </div>

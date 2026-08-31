@@ -155,16 +155,18 @@
 }
 
 .resume-page .experience-visual-slot {
-  border: 1px dashed var(--rule);
+  border: 1px solid #000;
   border-radius: 6px;
-  height: 300px;
   aspect-ratio: 1.82;
   max-width: 100%;
-}
-.resume-page .experience-visual-slot--filled {
-  height: 540px;
-  border: 1px solid #000;
   overflow: hidden;
+  position: relative;
+}
+.resume-page .experience-visual-slot--top {
+  height: 300px;
+}
+.resume-page .experience-visual-slot--bottom {
+  height: 540px;
 }
 
 @media (max-width: 900px) {
