@@ -161,12 +161,7 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
-}
-.resume-page .experience-visual-slot--top {
-  height: 300px;
-}
-.resume-page .experience-visual-slot--bottom {
-  height: 540px;
+  height: 420px;
 }
 
 @media (max-width: 900px) {
