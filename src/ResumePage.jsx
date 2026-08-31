@@ -362,7 +362,10 @@ export default function ResumePage() {
                             {fragment.body}
                           </div>
                           <div className="experience-visual">
-                            {isOpen && <GeoscienceWorkstation />}
+                            <div className="experience-visual-slot experience-visual-slot--empty" />
+                            <div className="experience-visual-slot experience-visual-slot--filled">
+                              {isOpen && <GeoscienceWorkstation />}
+                            </div>
                           </div>
                         </div>
                       </div>
