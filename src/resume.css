@@ -163,7 +163,7 @@
 }
 .resume-page .experience-visual-slot--filled {
   height: 540px;
-  border-style: solid;
+  border: none;
   overflow: hidden;
 }
 
