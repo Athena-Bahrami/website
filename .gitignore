@@ -25,3 +25,4 @@ dist-ssr
 
 # Source resume content not meant for the public repo (contains personal details)
 *.tex
+GeoscienceWorkstation.jsx
